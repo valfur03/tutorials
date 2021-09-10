@@ -43,3 +43,35 @@ $ gsettings set org.gnome.desktop.interface gtk-theme "Marwaita"
 #### Help for the future
 
 You won't always download themes that has the same file hierarchy as **Marwaita**. The most important thing to remember is that the folder that you need to copy always contains a file called `index.html` at its root.
+
+### Icons
+
+> For this example, we are going to use the Luna Icons set.
+> [GitHub](https://github.com/darkomarko42/Luna-Icons) - [Gnome-Look](https://www.gnome-look.org/p/1405455)
+
+Download the repository and unzip it.
+
+```shell
+$ unzip Luna-Icons-master.zip
+$ cd Luna-Icons-master
+$ ls
+ LICENSE   Luna-Dark        'Luna icons OSX Dark'    Luna-Light
+ Luna     'Luna icons OSX'  'Luna icons OSX Light'   README.md
+```
+
+You can see that there are some alternatives to the theme, whether you want it light or dark. Let's choose **Luna** (classic).
+
+In order to detect the set, it has to be copied in a specific folder, which is `$HOME/.icons` (create the folder if it doesn't exist).
+
+```shell
+$ mkdir -p ~/.icons
+$ cp -r Luna ~/.icons
+```
+
+Now, you will be able to set the desired set in the **Tweaks** application (Appearance > Themes > Icons).
+
+You can also set it using the following command.
+
+```shell
+$ gsettings set org.gnome.desktop.interface icon-theme "Luna"
+```
