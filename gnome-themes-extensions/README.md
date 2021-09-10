@@ -39,3 +39,7 @@ You can also set it using the following command.
 ```shell
 $ gsettings set org.gnome.desktop.interface gtk-theme "Marwaita"
 ```
+
+#### Help for the future
+
+You won't always download themes that has the same file hierarchy as **Marwaita**. The most important thing to remember is that the folder that you need to copy always contains a file called `index.html` at its root.
